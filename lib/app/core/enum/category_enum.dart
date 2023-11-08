@@ -1,0 +1,18 @@
+enum CategoryEnum {
+  gender,
+  incomerange,
+  occupation,
+  passtype,
+  purposeofremit,
+  relationship,
+  riskcategory,
+  sourceoffund,
+  title,
+  personaltype,
+  rbc,
+  country,
+  nationality,
+  receivetype,
+  accounttype,
+  custtype,
+}

@@ -1,0 +1,17 @@
+enum CommonAlertEnum {
+  alertForgotPW,
+  alertEditPW,
+  alertReport,
+  alertReportTip,
+  alertReportHistory,
+  alertReportDone,
+  alertEvaluation,
+  alertJoin,
+  alertPersonInfo,
+  alertFinish,
+  alertProtocol,
+  alertReportRefresh,
+  alertGameOver,
+  alertDeviceInfo,
+  alertReportDelete,
+}

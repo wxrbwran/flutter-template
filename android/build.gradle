@@ -1,0 +1,45 @@
+buildscript {
+    ext.kotlin_version = '1.7.10'
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url "https://download.flutter.io"        //flutter依赖
+        }
+//        maven{
+//            allowInsecureProtocol true
+////            url "http://10.110.0.212:7100/repository/maven-snapshots/"
+//            url "http://release.aisdk.fiture.com/repository/maven-snapshots/"
+//        }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+//        maven{
+//            allowInsecureProtocol true
+////            url "http://10.110.0.212:7100/repository/maven-snapshots/"
+//            url "http://release.aisdk.fiture.com/repository/maven-snapshots/"
+//
+//        }
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
